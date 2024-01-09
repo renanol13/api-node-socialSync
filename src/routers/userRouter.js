@@ -14,7 +14,7 @@ router
 router
     .patch("/edit/user", checkToken, (req, res) => userController.Update(req, res));
 router
-    .post("/isfollow", checkToken, (req, res) => friendsController.addFriend(req, res))
+    .post("/follow", checkToken, (req, res) => friendsController.addFriend(req, res))
     .get("/friends/:name", checkToken, (req, res) => friendsController.FindFriends(req, res))
 
     
