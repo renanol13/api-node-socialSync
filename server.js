@@ -1,7 +1,11 @@
-const app = require('./src/app')
+const { serverHttp } = require('./src/app')
+const ConnectSocket = require('./src/Socket.io/index')
+const mainDB = require('./src/dataBase/connection')
 
 const PORT = process.env.PORT ||  3001
 
-app.listen(PORT, () => {
+serverHttp.listen(PORT, () => {
+    mainDB()
+    ConnectSocket()
     console.log('Servidor rodando na porta'+ PORT);
 })

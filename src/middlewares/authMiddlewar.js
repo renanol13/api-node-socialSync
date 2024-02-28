@@ -3,7 +3,6 @@ require("dotenv").config();
 
 const checkToken = (req, res, next) => {
 
-
   const header = req.headers["authorization"];
   const token = header && header.split(" ")[1];
 

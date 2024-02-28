@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const dataURL = process.env.DATA_URL
 
-const main = async () => {
+const mainDB = async () => {
     try {
         await mongoose.connect(dataURL)
         console.log('DB conectado com sucesso');
@@ -12,4 +12,4 @@ const main = async () => {
     }
 }
 
-module.exports = main
+module.exports = mainDB

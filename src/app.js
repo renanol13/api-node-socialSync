@@ -1,12 +1,15 @@
 const express = require('express')
+const { Server } = require("socket.io");
+
 const app = express()
 const cors = require('cors')
-app.use(cors())
 
+app.use(cors())
 app.use(express.json())
 
-const db = require('./dataBase/connection')
-db()
+const serverHttp = require("http").createServer(app);
+const io = new Server(serverHttp, { cors: { origin: "*" } });
+
 
 
 //Router posts
@@ -21,4 +24,4 @@ app.use('/comments', routerComments)
 const routerUser = require('./routers/userRouter')
 app.use('/', routerUser)
 
-module.exports = app
+module.exports = {serverHttp, io}
