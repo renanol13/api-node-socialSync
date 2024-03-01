@@ -20,8 +20,13 @@ app.use('/posts', routerPost)
 const routerComments = require('./routers/commentsRouter')
 app.use('/comments', routerComments)
 
+const routerNotifications = require('./routers/notificationsRouter')
+app.use('/notifications', routerNotifications)
+
 //Router User
 const routerUser = require('./routers/userRouter')
 app.use('/', routerUser)
+
+
 
 module.exports = {serverHttp, io}
