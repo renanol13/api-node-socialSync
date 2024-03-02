@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 const serverHttp = require("http").createServer(app);
-const io = new Server(serverHttp, { cors: { origin: "https://social-sync-henna.vercel.app" } });
+const io = new Server(serverHttp, { cors: { origin: "*" } });
 
 
 
