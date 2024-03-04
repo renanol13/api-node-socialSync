@@ -1,4 +1,4 @@
-const { io } = require("../app");
+const  io  = require("../app");
 const NotificationsModel = require("../models/notificationsModel");
 const usersModel = require("../models/usersModel");
 

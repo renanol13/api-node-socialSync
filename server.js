@@ -1,4 +1,4 @@
-const { serverHttp } = require('./src/app')
+const  serverHttp  = require('./src/app')
 const ConnectSocket = require('./src/Socket.io/index')
 const mainDB = require('./src/dataBase/connection')
 

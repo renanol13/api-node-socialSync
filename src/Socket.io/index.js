@@ -1,4 +1,4 @@
-const { io } = require("../app");
+const  io  = require("../app");
 require("dotenv").config();
 const { handleUsersOnline } = require("./usersOnline");
 
